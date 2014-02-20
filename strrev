@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <stdlib.h>
+
+    typedef struct node {
+        int *data;
+        struct node *next;
+    } Node;
+
+    int createStack(Node **topOfStack) {
+        *stack = NULL;
+        return 0;
+    }
+
+   /* pass pointer to head of list, and pointer to value for node*/
+    /* pointer to the pointer @ the top of the stack*/
+   int Node push(Node **topOfStack, int *valueToPush) {
+        Node *newNode 
+        newNode = (Node*) malloc(sizeOf(Node));
+        if(!newNode) { return 1; }
+        
+        newNode->data = valueToPush;
+        newNode->next = *topOfStack;
+        *topOfStack = newNode;
+        return 0;
+    }
+
+   int Node pop(Node **topOfStack, int **data) {
+        Node *node;
+        node = *topOfStack;
+        if (!node) {return 0;}
+
+        *topOfStack = (node->next);
+        *data = (elem->data);
+        free(elem);
+        return 0;    
+    }
+
+int main(int argc, char *argv[]) {
+    Node *stack;
+    FILE *inputFile, *outputFile
+    int i;
+    int nLines;
+
+    if (argc != 3) {
+        fprintf(stderr, "Usage: intrev <inputfile> <outputfile> ");
+        exit(1);
+    }
+    inputFile = fopen(arg[1], "r+");
+    if (inputFile == NULL) {
+        printf("Error reading file\n");
+    }
+    int number;
+    creatStack(&stack);
+
+    while (!feof(inputFile)) {
+        fscanf(inputFile, "%d", &number);
+        if (push(&stack, &number) ==1) {
+            printf("Error pushing\n");
+        } 
+    int endOfStack = 1; 
+    int *data   
+    while (endOfStack != 0) {
+        endOfStack = pop(&stack, &data);
+
+    }    
+
+
+
+}
